@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="es-GT" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dirección de arte · Purina rediseño</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..900;1,62..125,300..900&display=swap">
+<script>document.documentElement.className=document.documentElement.className.replace('no-js','js');</script>
+<style>
+:root{
+  --brand:#E81C24; --brand-press:#B8141B; --brand-soft:#FDE3E1;
+  --cta:#E81C24; --cta-ink:#FFFFFF;
+  --ink:#1B1414; --bg:#FFF7EF; --surface:#FFFFFF; --line:#EADBD0; --muted:#6B5E58;
+  --font:"Archivo",system-ui,sans-serif;
+  --r-sm:4px; --r-md:8px; --r-lg:14px;
+  --ease:cubic-bezier(.25,1,.5,1); --ease-io:cubic-bezier(.76,0,.24,1); --ease-pop:cubic-bezier(.34,1.4,.64,1);
+  --dur:.9s; --dist:28px; --t-hover:.35s;
+  --gutter:clamp(16px,4vw,48px); --maxw:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);overflow-x:clip;line-height:1.5}
+img{max-width:100%;display:block}
+.note{position:fixed;left:50%;bottom:calc(10px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:60;background:var(--ink);color:#fff;font-size:12px;padding:6px 12px;border-radius:99px;white-space:nowrap}
+
+/* ===== Portada ===== */
+.hero{position:relative;min-height:100svh;display:grid;align-content:center;padding:96px var(--gutter) 56px;overflow:hidden}
+.nav{position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:14px var(--gutter);z-index:5}
+.logo{display:flex;align-items:center;gap:8px;color:var(--ink);text-decoration:none}
+.logo svg{width:30px;height:30px}
+.logo b{font-weight:900;font-stretch:115%;letter-spacing:.06em;font-size:17px}
+.nav a.mini{font-size:14px;font-weight:600;color:var(--ink)}
+.hero__grid{display:grid;gap:32px;max-width:var(--maxw);margin:0 auto;width:100%}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brand-press)}
+.eyebrow i{width:10px;height:10px;background:var(--brand);display:inline-block}
+.h1{font-weight:900;font-stretch:78%;line-height:.92;letter-spacing:-.02em;font-size:clamp(46px,12.5vw,128px);margin:14px 0 18px;text-transform:uppercase}
+.h1 .line{display:block;padding-bottom:.08em;margin-bottom:-.08em}
+.mark{background:var(--brand);color:#fff;padding:0 .12em;display:inline-block;transform-origin:left center}
+.lead{font-size:clamp(17px,2.2vw,20px);color:var(--muted);max-width:34ch}
+.actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 24px;border-radius:var(--r-sm);background:var(--cta);color:var(--cta-ink);font-weight:800;font-size:16px;text-decoration:none;border:0;cursor:pointer;transition:background var(--t-hover) var(--ease),transform var(--t-hover) var(--ease)}
+.btn:hover{background:var(--brand-press)}
+.btn:active{transform:scale(.97)}
+.btn .sq{width:10px;height:10px;background:#fff;transition:transform var(--t-hover) var(--ease)}
+.btn:hover .sq{transform:rotate(90deg) scale(1.2)}
+.link{font-weight:700;color:var(--ink);text-underline-offset:4px}
+
+/* Tablero: 3x3 con productos en los cuadros blancos */
+.board{display:grid;grid-template-columns:repeat(3,1fr);aspect-ratio:1;width:min(100%,520px);justify-self:center;border:3px solid var(--brand);background:var(--surface)}
+.cell{position:relative;display:grid;place-items:center;overflow:hidden}
+.cell.r{background:var(--brand)}
+.cell.w{background:#fff}
+.cell img{width:82%;height:82%;object-fit:contain}
+.cell svg{width:58%;height:58%;color:#fff}
+.cell .tag{position:absolute;left:6px;bottom:6px;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--brand-press)}
+
+@media (min-width:900px){
+  .hero__grid{grid-template-columns:1.1fr .9fr;align-items:center}
+  .h1{font-size:clamp(64px,7.4vw,118px)}
+}
+
+/* ===== Intro firma ===== */
+.intro{position:fixed;inset:0;z-index:50;display:grid;place-items:center;pointer-events:none}
+.intro__bg{position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr)}
+.intro__bg span{background:var(--brand)}
+.intro__mark{position:relative;display:grid;justify-items:center;gap:18px}
+.intro__mark svg{width:120px;height:120px}
+.intro__word{color:#fff;font-weight:900;font-stretch:120%;letter-spacing:.14em;font-size:34px;overflow:hidden;display:flex}
+.intro__word span{display:inline-block}
+.no-js .intro{display:none}
+.intro.done{display:none}
+.replay{position:fixed;right:12px;bottom:calc(48px + env(safe-area-inset-bottom));z-index:55;background:#fff;border:2px solid var(--ink);font:700 13px var(--font);padding:8px 12px;border-radius:var(--r-sm);cursor:pointer}
+
+/* ===== Hoja de muestra ===== */
+.sheet{max-width:var(--maxw);margin:0 auto;padding:64px var(--gutter) 120px;display:grid;gap:64px}
+.sheet h2{font-weight:900;font-stretch:85%;text-transform:uppercase;font-size:clamp(28px,5vw,44px);line-height:1;margin-bottom:18px}
+.sheet p.s{color:var(--muted);max-width:56ch}
+.pal{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:16px}
+.sw{border-radius:var(--r-md);overflow:hidden;background:#fff;border:1px solid var(--line)}
+.sw div{height:84px}
+.sw p{padding:10px 12px;font-size:14px}
+.sw b{display:block}
+.type .t1{font-weight:900;font-stretch:78%;text-transform:uppercase;font-size:clamp(40px,8vw,72px);line-height:.95}
+.type .t2{font-weight:800;font-stretch:90%;font-size:clamp(24px,4vw,34px);margin:14px 0 8px}
+.els{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:16px}
+.el{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:18px;display:grid;gap:12px}
+.el .demo{height:90px;display:grid;place-items:center}
+.ribbon{height:22px;width:100%;background:repeating-linear-gradient(90deg,var(--brand) 0 22px,#fff 22px 44px);border-block:2px solid var(--brand)}
+.stamp{width:88px;height:88px;animation:spin 18s linear infinite;color:var(--brand)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.kib{display:flex;gap:8px}
+.kib i{width:22px;height:22px;background:var(--brand);display:block}
+.kib i:nth-child(2){background:var(--ink)}
+.kib i:nth-child(3){background:#fff;outline:2px solid var(--brand);outline-offset:-2px}
+.card{background:#fff;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line);max-width:320px;transition:transform var(--t-hover) var(--ease)}
+.card:hover{transform:translateY(-6px)}
+.card .ph{aspect-ratio:1;background:#fff;display:grid;place-items:center;border-bottom:3px solid var(--brand)}
+.card .ph img{width:80%}
+.card .bd{padding:16px}
+.card small{font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--brand-press);font-size:11px}
+.card h3{font-stretch:90%;font-weight:800;font-size:20px;line-height:1.15;margin:6px 0}
+.row{display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start}
+
+@media (prefers-reduced-motion:reduce){.stamp{animation:none}}
+</style>
+</head>
+<body>
+
+<!-- Símbolo de tablero reutilizable (aproximación; reemplazar por el SVG oficial) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="tablero" viewBox="0 0 90 90">
+    <rect x="1.5" y="1.5" width="87" height="87" fill="#fff" stroke="currentColor" stroke-width="3"/>
+    <g fill="currentColor"><rect x="3" y="3" width="28" height="28"/><rect x="59" y="3" width="28" height="28"/><rect x="31" y="31" width="28" height="28"/><rect x="3" y="59" width="28" height="28"/><rect x="59" y="59" width="28" height="28"/></g>
+  </symbol>
+  <symbol id="perro" viewBox="0 0 64 64"><path fill="currentColor" d="M18 10c-7 0-13 5-13 16 0 6 2 11 6 11 2 0 3-2 4-4 1 12 8 21 17 21s16-9 17-21c1 2 2 4 4 4 4 0 6-5 6-11 0-11-6-16-13-16-3 0-6 1-8 4H26c-2-3-5-4-8-4Z"/><g fill="#E81C24"><circle cx="25" cy="31" r="3"/><circle cx="39" cy="31" r="3"/><path d="M27 40c0-2 2.5-3 5-3s5 1 5 3-2.5 4-5 4-5-2-5-4Z"/></g></symbol>
+  <symbol id="gato" viewBox="0 0 64 64"><path fill="currentColor" d="M12 8l12 10h16L52 8l2 22c2 3 3 6 3 9 0 10-10 17-25 17S7 49 7 39c0-3 1-6 3-9L12 8Z"/><g fill="#E81C24"><ellipse cx="24" cy="36" rx="2.6" ry="3.6"/><ellipse cx="40" cy="36" rx="2.6" ry="3.6"/><path d="M29 43h6l-3 3Z"/></g></symbol>
+</svg>
+
+<div class="note">Hoja de muestra · no se publica</div>
+<button class="replay" type="button" id="replay">Ver de nuevo</button>
+
+<!-- Intro firma: el tablero se arma cuadro por cuadro -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro__bg"><span></span><span></span><span></span></div>
+  <div class="intro__mark">
+    <svg viewBox="0 0 90 90" id="introBoard">
+      <rect x="1.5" y="1.5" width="87" height="87" fill="none" stroke="#fff" stroke-width="3" class="ib-frame"/>
+      <g fill="#fff"><rect class="ib" x="3" y="3" width="28" height="28"/><rect class="ib" x="59" y="3" width="28" height="28"/><rect class="ib" x="31" y="31" width="28" height="28"/><rect class="ib" x="3" y="59" width="28" height="28"/><rect class="ib" x="59" y="59" width="28" height="28"/></g>
+    </svg>
+    <div class="intro__word"><span>P</span><span>U</span><span>R</span><span>I</span><span>N</span><span>A</span></div>
+  </div>
+</div>
+
+<!-- ===== INICIO Portada ===== -->
+<header class="hero" id="inicio">
+  <nav class="nav">
+    <a class="logo" href="#inicio" aria-label="Purina, inicio"><svg style="color:var(--brand)"><use href="#tablero"/></svg><b>PURINA</b></a>
+    <a class="mini" href="#productos">Productos</a>
+  </nav>
+  <div class="hero__grid">
+    <div>
+      <span class="eyebrow h-in"><i></i>Your Pet, Our Passion.</span>
+      <h1 class="h1" data-split>
+        <span class="line">Se nota en</span>
+        <span class="line">cada <span class="mark">salto</span></span>
+        <span class="line">y cada ronroneo</span>
+      </h1>
+      <p class="lead h-in">Nutrición completa y balanceada para perros y gatos, en cada etapa de su vida.</p>
+      <div class="actions h-in">
+        <a class="btn" href="https://purina.com.gt/purina/productos" rel="noopener">Encuentra su alimento <span class="sq"></span></a>
+        <a class="link" href="#productos">Ver líneas</a>
+      </div>
+    </div>
+    <div class="board" id="board" aria-label="Productos Purina">
+      <div class="cell w"><img src="https://purina.com.gt/sites/default/files/2024-09/Empaque_Multiproteina_Diversity.jpg" alt="Dog Chow Multi Proteínas"></div>
+      <div class="cell r"><svg><use href="#perro"/></svg></div>
+      <div class="cell w"><img src="https://purina.com.gt/sites/default/files/2026-01/7501072212627_1.jpg" alt="Cat Chow Gatitos Pollo"></div>
+      <div class="cell r"><svg><use href="#gato"/></svg></div>
+      <div class="cell w"><img src="https://purina.com.gt/sites/default/files/2023-04/7501072215277_1.jpg" alt="Pro Plan Estómago Sensible"></div>
+      <div class="cell r"><svg><use href="#perro"/></svg></div>
+      <div class="cell w"><img src="https://purina.com.gt/sites/default/files/2024-09/Empaque_Altaproteina_Diversity.jpg" alt="Dog Chow Alta Proteína"></div>
+      <div class="cell r"><svg><use href="#gato"/></svg></div>
+      <div class="cell w"><img src="https://purina.com.gt/sites/default/files/2026-01/7501072212672_1.jpg" alt="Cat Chow Esterilizados Carne"></div>
+    </div>
+  </div>
+</header>
+<!-- ===== FIN Portada ===== -->
+
+<main class="sheet" id="productos">
+  <section>
+    <h2>Tus colores</h2>
+    <p class="s">El rojo manda: botones, el tablero y los momentos importantes. El crema da calidez de hogar y deja respirar al rojo.</p>
+    <div class="pal">
+      <div class="sw"><div style="background:#E81C24"></div><p><b>Rojo Purina · #E81C24</b>Botones, tablero, acentos</p></div>
+      <div class="sw"><div style="background:#B8141B"></div><p><b>Rojo profundo · #B8141B</b>Al pasar el mouse y textos pequeños en rojo</p></div>
+      <div class="sw"><div style="background:#1B1414"></div><p><b>Casi negro · #1B1414</b>Titulares y textos</p></div>
+      <div class="sw"><div style="background:#FFF7EF"></div><p><b>Crema · #FFF7EF</b>Fondo general, cálido</p></div>
+      <div class="sw"><div style="background:#FFFFFF"></div><p><b>Blanco · #FFFFFF</b>Cuadros del tablero y tarjetas de producto</p></div>
+    </div>
+  </section>
+
+  <section class="type">
+    <h2>Tus letras</h2>
+    <p class="t1">Nutrición que se nota</p>
+    <p class="t2">Perros y gatos no comen igual</p>
+    <p class="s">Una sola familia de letra que se ensancha o se estrecha: angosta y muy gruesa en titulares para que se sienta con fuerza, normal en textos para que se lea fácil.</p>
+  </section>
+
+  <section>
+    <h2>Lo que hace única tu página</h2>
+    <div class="els">
+      <div class="el"><div class="demo"><svg style="width:80px;height:80px;color:var(--brand)"><use href="#tablero"/></svg></div><p><b>El tablero</b> — sale de tu logo. Abre la página, ordena los productos y se transforma entre secciones.</p></div>
+      <div class="el"><div class="demo"><div class="ribbon"></div></div><p><b>La cinta a cuadros</b> — el mismo tablero estirado: separa secciones y corre con el scroll.</p></div>
+      <div class="el"><div class="demo"><svg class="stamp" viewBox="0 0 120 120"><defs><path id="c" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs><text font-size="11" font-weight="800" letter-spacing="2" fill="currentColor"><textPath href="#c" textLength="289" lengthAdjust="spacing">YOUR PET • OUR PASSION • PURINA • </textPath></text><use href="#tablero" x="40" y="40" width="40" height="40"/></svg></div><p><b>El sello</b> — tu frase girando alrededor del tablero. Marca lo verificado.</p></div>
+      <div class="el"><div class="demo"><div class="kib"><i></i><i></i><i></i></div></div><p><b>Cuadros-viñeta</b> — un cuadrito del tablero en vez de puntos o íconos genéricos.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Botón y tarjeta</h2>
+    <div class="row">
+      <a class="btn" href="https://purina.com.gt/purina/productos" rel="noopener">Encuentra su alimento <span class="sq"></span></a>
+      <article class="card">
+        <div class="ph"><img src="https://purina.com.gt/sites/default/files/2024-09/Empaque_Multiproteina_Diversity.jpg" alt="Dog Chow Multi Proteínas"></div>
+        <div class="bd"><small>Perros · Adultos</small><h3>Dog Chow® Multi Proteínas</h3><p class="s">Cinco proteínas: carne, pollo, salmón, cerdo y pavo.</p></div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<script src="vendor/gsap.min.js" defer></script>
+<script src="vendor/ScrollTrigger.min.js" defer></script>
+<script src="vendor/SplitText.min.js" defer></script>
+<script src="vendor/lenis.min.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const $=(s,c=document)=>c.querySelector(s), $$=(s,c=document)=>[...c.querySelectorAll(s)];
+  const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const hasGSAP=!!window.gsap;
+  const intro=$('#intro');
+  if(!hasGSAP){document.documentElement.classList.remove('js');intro&&intro.classList.add('done');return;}
+  gsap.registerPlugin(ScrollTrigger,SplitText);
+  if(window.Lenis&&!RM){const l=new Lenis({lerp:.1});l.on('scroll',ScrollTrigger.update);gsap.ticker.add(t=>l.raf(t*1000));gsap.ticker.lagSmoothing(0);}
+  const M={ease:'power3.out',io:'power3.inOut',pop:'back.out(1.4)',dur:.9,st:.07};
+  let split, tl;
+  function play(){
+    if(tl) tl.kill();
+    intro.classList.remove('done');
+    const cells=$$('#board .cell'), ib=$$('#introBoard .ib'), letters=$$('.intro__word span'), cols=$$('.intro__bg span');
+    if(split) split.revert();
+    split=SplitText.create('.h1 .line',{type:'lines',mask:'lines'});
+    if(RM){
+      gsap.set([cols,ib,letters,'.ib-frame'],{clearProps:'all'});
+      gsap.timeline().to(intro,{autoAlpha:0,duration:.4,delay:.6,onComplete:()=>intro.classList.add('done')})
+        .from(['.h1','.h-in',cells],{autoAlpha:0,duration:.5},'<');
+      return;
+    }
+    gsap.set(intro,{autoAlpha:1});
+    gsap.set(cols,{yPercent:0});
+    gsap.set(ib,{scale:0,transformOrigin:'50% 50%'});
+    gsap.set('.ib-frame',{strokeDasharray:348,strokeDashoffset:348});
+    gsap.set(letters,{yPercent:110});
+    gsap.set(split.lines,{yPercent:105});
+    gsap.set('.mark',{scaleX:0});
+    gsap.set('.h-in',{autoAlpha:0,y:24});
+    gsap.set(cells,{scale:.6,autoAlpha:0});
+    tl=gsap.timeline({defaults:{ease:M.ease}});
+    tl.to('.ib-frame',{strokeDashoffset:0,duration:.6,ease:'power2.inOut'},0)
+      .to([ib[2],ib[0],ib[1],ib[4],ib[3]],{scale:1,duration:.45,ease:M.pop,stagger:.08},.2)
+      .to(letters,{yPercent:0,duration:.6,stagger:.05},.55)
+      .to('.intro__mark',{scale:.6,autoAlpha:0,duration:.5,ease:M.io},1.45)
+      .to(cols,{yPercent:-100,duration:.8,ease:M.io,stagger:.08},1.55)
+      .set(intro,{autoAlpha:0,onComplete:()=>intro.classList.add('done')})
+      .to(split.lines,{yPercent:0,duration:M.dur,stagger:.1},1.85)
+      .to('.mark',{scaleX:1,duration:.6,ease:M.io},2.35)
+      .to('.h-in',{autoAlpha:1,y:0,duration:.7,stagger:.08},2.2)
+      .to([0,4,8,2,6,1,3,5,7].map(i=>cells[i]),{scale:1,autoAlpha:1,duration:.6,ease:M.pop,stagger:.06},2.0);
+    gsap.set('.intro__mark',{scale:1,autoAlpha:1});
+    // Tope y salto: un toque termina la intro
+    const skip=()=>tl.progress()<.62&&tl.seek(1.85+0.01);
+    intro.style.pointerEvents='auto';
+    intro.addEventListener('pointerdown',skip,{once:true});
+    setTimeout(()=>{intro.style.pointerEvents='none'},2000);
+  }
+  document.fonts.ready.then(play);
+  // Respaldo: si algo falla, a los 5 s todo queda visible
+  setTimeout(()=>{ if(!tl){intro.classList.add('done');document.documentElement.classList.remove('js');} else if(tl.progress()<1&&!tl.isActive()) tl.progress(1); },5000);
+  $('#replay').addEventListener('click',()=>{window.scrollTo(0,0);play();});
+});
+</script>
+</body>
+</html>

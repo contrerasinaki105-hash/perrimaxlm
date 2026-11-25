@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="es-GT" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Purina Guatemala · Nutrición para perros y gatos</title>
+<meta name="description" content="Encuentra el alimento Purina para tu perro o gato según su especie, su etapa y lo que necesita. Guía de cambio de alimento en 7 días y lo que nunca debe comer.">
+<meta name="theme-color" content="#E81C24">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Purina · Se nota en cada salto">
+<meta property="og:description" content="Nutrición completa y balanceada para perros y gatos, en cada etapa de su vida.">
+<meta property="og:image" content="img/og-imagen.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 90 90'%3E%3Crect width='90' height='90' fill='%23fff'/%3E%3Cg fill='%23E81C24'%3E%3Crect x='0' y='0' width='30' height='30'/%3E%3Crect x='60' y='0' width='30' height='30'/%3E%3Crect x='30' y='30' width='30' height='30'/%3E%3Crect x='0' y='60' width='30' height='30'/%3E%3Crect x='60' y='60' width='30' height='30'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://purina.com.gt">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap">
+<link rel="stylesheet" href="css/styles.css?v=20261123c">
+<script>document.documentElement.className=document.documentElement.className.replace('no-js','js');</script>
+</head>
+<body>
+
+<!-- Símbolos de la marca (tablero: aproximación, reemplazar por SVG oficial) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="tablero" viewBox="0 0 90 90">
+    <rect x="1.5" y="1.5" width="87" height="87" fill="#fff" stroke="currentColor" stroke-width="3"/>
+    <g fill="currentColor"><rect x="3" y="3" width="28" height="28"/><rect x="59" y="3" width="28" height="28"/><rect x="31" y="31" width="28" height="28"/><rect x="3" y="59" width="28" height="28"/><rect x="59" y="59" width="28" height="28"/></g>
+  </symbol>
+  <symbol id="perro" viewBox="0 0 64 64"><path fill="currentColor" d="M18 10c-7 0-13 5-13 16 0 6 2 11 6 11 2 0 3-2 4-4 1 12 8 21 17 21s16-9 17-21c1 2 2 4 4 4 4 0 6-5 6-11 0-11-6-16-13-16-3 0-6 1-8 4H26c-2-3-5-4-8-4Z"/><g fill="#E81C24"><circle cx="25" cy="31" r="3"/><circle cx="39" cy="31" r="3"/><path d="M27 40c0-2 2.5-3 5-3s5 1 5 3-2.5 4-5 4-5-2-5-4Z"/></g></symbol>
+  <symbol id="gato" viewBox="0 0 64 64"><path fill="currentColor" d="M12 8l12 10h16L52 8l2 22c2 3 3 6 3 9 0 10-10 17-25 17S7 49 7 39c0-3 1-6 3-9L12 8Z"/><g fill="#E81C24"><ellipse cx="24" cy="36" rx="2.6" ry="3.6"/><ellipse cx="40" cy="36" rx="2.6" ry="3.6"/><path d="M29 43h6l-3 3Z"/></g></symbol>
+  <symbol id="perro-l" viewBox="0 0 64 64"><path fill="currentColor" d="M18 10c-7 0-13 5-13 16 0 6 2 11 6 11 2 0 3-2 4-4 1 12 8 21 17 21s16-9 17-21c1 2 2 4 4 4 4 0 6-5 6-11 0-11-6-16-13-16-3 0-6 1-8 4H26c-2-3-5-4-8-4Z"/></symbol>
+  <symbol id="gato-l" viewBox="0 0 64 64"><path fill="currentColor" d="M12 8l12 10h16L52 8l2 22c2 3 3 6 3 9 0 10-10 17-25 17S7 49 7 39c0-3 1-6 3-9L12 8Z"/></symbol>
+</svg>
+
+<!-- ===== INICIO Intro firma ===== -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro__bg"><span></span><span></span><span></span></div>
+  <div class="intro__mark">
+    <svg viewBox="0 0 90 90" id="introBoard">
+      <rect class="ib-frame" x="1.5" y="1.5" width="87" height="87" fill="none" stroke="#fff" stroke-width="3"/>
+      <g fill="#fff"><rect class="ib" x="3" y="3" width="28" height="28"/><rect class="ib" x="59" y="3" width="28" height="28"/><rect class="ib" x="31" y="31" width="28" height="28"/><rect class="ib" x="3" y="59" width="28" height="28"/><rect class="ib" x="59" y="59" width="28" height="28"/></g>
+    </svg>
+    <div class="intro__word"><span>P</span><span>U</span><span>R</span><span>I</span><span>N</span><span>A</span></div>
+  </div>
+  <button class="intro__skip" type="button" tabindex="-1">Toca para entrar</button>
+</div>
+<!-- ===== FIN Intro firma ===== -->
+
+<!-- ===== INICIO Navegación ===== -->
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a class="logo" href="#inicio" aria-label="Purina, inicio"><svg aria-hidden="true"><use href="#tablero"/></svg><b>PURINA</b></a>
+    <nav class="nav__links" aria-label="Secciones">
+      <a href="#marcas">Marcas</a>
+      <a href="#etapas">Etapas</a>
+      <a href="#cambio">Cambio de alimento</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+    <a class="btn" href="#encuentra">Encuentra su alimento</a>
+  </div>
+</header>
+<!-- ===== FIN Navegación ===== -->
+
+<main id="inicio">
+
+<!-- ===== INICIO Portada ===== -->
+<section class="hero wrap" aria-labelledby="t-hero">
+  <div class="hero__grid">
+    <div class="hero__copy">
+      <h1 class="h1" id="t-hero"><span class="line-mask"><span class="li">Se nota en</span></span><span class="line-mask"><span class="li">cada salto</span></span></h1>
+      <p class="lead" data-hero>Alimento Purina para perros y gatos: nutrición completa y balanceada para cada especie y cada etapa de su vida.</p>
+      <div class="hero__actions" data-hero>
+        <a class="btn" href="#encuentra">Encuentra su alimento <span class="sq" aria-hidden="true"></span></a>
+        <a class="tlink" href="#marcas">Ver todas las marcas</a>
+      </div>
+    </div>
+    <div class="board" id="board" role="img" aria-label="Productos Purina: Dog Chow, Cat Chow y Pro Plan">
+      <div class="cell w"><img src="https://purina.com.gt/sites/default/files/2024-09/Empaque_Multiproteina_Diversity.jpg" alt="" width="1200" height="1200" fetchpriority="high"></div>
+      <div class="cell r"><svg aria-hidden="true"><use href="#perro"/></svg></div>
+      <div class="cell w"><img src="https://purina.com.gt/sites/default/files/2026-01/7501072212627_1.jpg" alt="" width="1000" height="1000"></div>
+      <div class="cell r"><svg aria-hidden="true"><use href="#gato"/></svg></div>
+      <div class="cell w"><img src="https://purina.com.gt/sites/default/files/2023-04/7501072215277_1.jpg" alt="" width="2000" height="2000"></div>
+      <div class="cell r"><svg aria-hidden="true"><use href="#perro"/></svg></div>
+      <div class="cell w"><img src="https://purina.com.gt/sites/default/files/2024-09/Empaque_Altaproteina_Diversity.jpg" alt="" width="1200" height="1200"></div>
+      <div class="cell r"><svg aria-hidden="true"><use href="#gato"/></svg></div>
+      <div class="cell w"><img src="https://purina.com.gt/sites/default/files/2024-08/ccg1.png" alt="" width="1200" height="1200"></div>
+    </div>
+  </div>
+</section>
+<!-- ===== FIN Portada ===== -->
+
+<!-- ===== INICIO Perros y gatos no comen igual ===== -->
+<section class="diff section" aria-labelledby="t-diff">
+  <div class="wrap">
+    <h2 class="h2" id="t-diff" data-reveal>Perros y gatos no comen igual</h2>
+    <div class="diff__top">
+      <p class="diff__statement" id="statement">El perro aprovecha bien una dieta variada. El gato es carnívoro estricto: necesita proteína animal y nutrientes que solo obtiene de su comida, como la taurina.</p>
+      <img class="diff__bowl" data-reveal src="https://purina.com.gt/sites/default/files/2024-04/Bodegon-bowl-DRY.png" alt="Tazón verde lleno de croquetas Dog Chow" width="2784" height="1330" loading="lazy">
+    </div>
+    <div class="diff__cols">
+      <div class="diff__col" data-reveal>
+        <h3 class="h3"><svg aria-hidden="true"><use href="#perro-l"/></svg>Tu perro</h3>
+        <ul>
+          <li>Come bien con una dieta que combina proteína, cereales y vegetales.</li>
+          <li>De cachorro necesita más proteína que de adulto: mínimo 22.5 % en base seca.</li>
+          <li>Su alimento debe decir que es para su etapa: crecimiento o mantenimiento.</li>
+        </ul>
+      </div>
+      <div class="diff__col cat" data-reveal>
+        <h3 class="h3"><svg aria-hidden="true"><use href="#gato-l"/></svg>Tu gato</h3>
+        <ul>
+          <li>Necesita taurina en su comida: su cuerpo no produce suficiente.</li>
+          <li>Pide más proteína que un perro: mínimo 26 % en base seca ya de adulto.</li>
+          <li>No le des alimento de perro: no cubre lo que su cuerpo necesita.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="src">Fuentes: perfiles de nutrientes AAFCO, citados por la <a href="https://www.fda.gov/animal-veterinary/animal-health-literacy/complete-and-balanced-pet-food" rel="noopener">FDA</a> y <a href="https://www.aafco.org/wp-content/uploads/2023/01/MBRC_minutes_Attachment_A.pdf" rel="noopener">AAFCO</a>. Consultado en noviembre de 2026.</p>
+  </div>
+</section>
+<!-- ===== FIN Perros y gatos no comen igual ===== -->
+
+<!-- ===== INICIO Marcas ===== -->
+<section class="brands section" id="marcas" aria-labelledby="t-brands">
+  <div class="wrap">
+    <div class="brands__head">
+      <div>
+        <h2 class="h2" id="t-brands" data-reveal>Una línea para cada plato</h2>
+        <p class="lead" data-reveal>Diez marcas, cada una con su forma de cuidar. Filtra por tu mascota y entra a la que buscas.</p>
+      </div>
+      <div class="filter" role="group" aria-label="Filtrar marcas" data-reveal>
+        <button type="button" aria-pressed="true" data-f="todos">Todas</button>
+        <button type="button" aria-pressed="false" data-f="perro">Perro</button>
+        <button type="button" aria-pressed="false" data-f="gato">Gato</button>
+      </div>
+    </div>
+    <div class="rail" id="rail" tabindex="0" aria-label="Marcas Purina, desliza para ver más">
+      <a class="brand" data-for="perro gato" href="https://purina.com.gt/proplan" rel="noopener">
+        <div class="brand__logo"><img src="https://purina.com.gt/sites/default/files/2024-03/Proplan_C-2.png" alt="Pro Plan" loading="lazy" width="800" height="800"></div>
+        <div class="brand__body"><h3 class="h3">Pro Plan®</h3><p>Nutrición avanzada, con fórmulas para necesidades como estómago y piel sensibles.</p></div>
+        <div class="brand__for"><i></i>Perros y gatos<span class="brand__go" aria-hidden="true">→</span></div>
+      </a>
+      <a class="brand" data-for="perro" href="https://purina.com.gt/dogchow" rel="noopener">
+        <div class="brand__logo"><img src="https://purina.com.gt/sites/default/files/2026-02/DC-LOGO-ESPANOL-1.png" alt="Dog Chow" loading="lazy" width="800" height="800"></div>
+        <div class="brand__body"><h3 class="h3">Dog Chow®</h3><p>Con EXTRAlife®, una mezcla de antioxidantes. Fórmulas Multi Proteínas y Alta Proteína.</p></div>
+        <div class="brand__for"><i></i>Perros<span class="brand__go" aria-hidden="true">→</span></div>
+      </a>
+      <a class="brand" data-for="gato" href="https://purina.com.gt/catchow" rel="noopener">
+        <div class="brand__logo"><img src="https://purina.com.gt/sites/default/files/2024-03/Catchow_C-2.png" alt="Cat Chow" loading="lazy" width="800" height="800"></div>
+        <div class="brand__body"><h3 class="h3">Cat Chow®</h3><p>Defense Plus+ para gatitos, adultos, esterilizados y gatos hogareños.</p></div>
+        <div class="brand__for"><i></i>Gatos<span class="brand__go" aria-hidden="true">→</span></div>
+      </a>
+      <a class="brand" data-for="perro gato" href="https://purina.com.gt/purina-one" rel="noopener">
+        <div class="brand__logo"><img src="https://purina.com.gt/sites/default/files/2024-03/OnePerros_C.png" alt="Purina ONE" loading="lazy" width="800" height="800"></div>
+        <div class="brand__body"><h3 class="h3">Purina® ONE</h3><p>Recetas para perros y para gatos, con versiones por etapa de vida.</p></div>
+        <div class="brand__for"><i></i>Perros y gatos<span class="brand__go" aria-hidden="true">→</span></div>
+      </a>
+      <a class="brand" data-for="perro" href="https://purina.com.gt/excellent" rel="noopener">
+        <div class="brand__logo"><img src="https://purina.com.gt/sites/default/files/2024-03/Excellent_C.png" alt="Excellent" loading="lazy" width="800" height="800"></div>
+        <div class="brand__body"><h3 class="h3">Excellent®</h3><p>Alimento para perros con fórmulas según su tamaño y su edad.</p></div>
+        <div class="brand__for"><i></i>Perros<span class="brand__go" aria-hidden="true">→</span></div>
+      </a>
+      <a class="brand" data-for="gato" href="https://purina.com.gt/felix" rel="noopener">
+        <div class="brand__logo"><img src="https://purina.com.gt/sites/default/files/2024-03/Felix_C.png" alt="Felix" loading="lazy" width="800" height="800"></div>
+        <div class="brand__body"><h3 class="h3">Felix®</h3><p>Alimento húmedo para gatos, en sobres listos para servir.</p></div>
+        <div class="brand__for"><i></i>Gatos<span class="brand__go" aria-hidden="true">→</span></div>
+      </a>
+      <a class="brand" data-for="perro" href="https://purina.com.gt/beneful" rel="noopener">
+        <div class="brand__logo"><img src="https://purina.com.gt/sites/default/files/2024-03/Beneful_C.png" alt="Beneful" loading="lazy" width="800" height="800"></div>
+        <div class="brand__body"><h3 class="h3">Beneful®</h3><p>Recetas para perros con ingredientes que se ven en cada croqueta.</p></div>
+        <div class="brand__for"><i></i>Perros<span class="brand__go" aria-hidden="true">→</span></div>
+      </a>
+      <a class="brand" data-for="gato" href="https://purina.com.gt/fancy-feast" rel="noopener">
+        <div class="brand__logo"><img src="https://purina.com.gt/sites/default/files/2024-03/FancyFeast_C.png" alt="Fancy Feast" loading="lazy" width="800" height="800"></div>
+        <div class="brand__body"><h3 class="h3">Fancy Feast®</h3><p>Alimento húmedo gourmet para gatos.</p></div>
+        <div class="brand__for"><i></i>Gatos<span class="brand__go" aria-hidden="true">→</span></div>
+      </a>
+      <a class="brand" data-for="perro" href="https://purina.com.gt/alpo" rel="noopener">
+        <div class="brand__logo"><img src="https://purina.com.gt/sites/default/files/2024-03/Alpo_C.png" alt="Alpo" loading="lazy" width="800" height="800"></div>
+        <div class="brand__body"><h3 class="h3">Alpo®</h3><p>Alimento para perros con sabor que se nota.</p></div>
+        <div class="brand__for"><i></i>Perros<span class="brand__go" aria-hidden="true">→</span></div>
+      </a>
+      <a class="brand" data-for="perro" href="https://purina.com.gt/dentalife" rel="noopener">
+        <div class="brand__logo"><img src="https://purina.com.gt/sites/default/files/2024-03/Dentalife_C.png" alt="Dentalife" loading="lazy" width="800" height="800"></div>
+        <div class="brand__body"><h3 class="h3">Dentalife®</h3><p>Premios masticables para el cuidado de los dientes de tu perro.</p></div>
+        <div class="brand__for"><i></i>Perros<span class="brand__go" aria-hidden="true">→</span></div>
+      </a>
+    </div>
+    <p class="rail__hint">Desliza o arrastra para ver todas las marcas.</p>
+  </div>
+</section>
+<!-- ===== FIN Marcas ===== -->
+
+<!-- ===== INICIO Buscador ===== -->
+<section class="finder section" id="encuentra" aria-labelledby="t-finder">
+  <div class="wrap finder__grid">
+    <form id="finderForm" onsubmit="return false">
+      <h2 class="h2" id="t-finder" data-reveal>Encuentra su alimento</h2>
+      <p class="lead" data-reveal>Tres respuestas y te decimos por dónde empezar, cuánta proteína pide su etapa y cómo hacer el cambio.</p>
+      <fieldset class="q" data-reveal>
+        <legend>¿Quién come?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="sp" value="perro" checked><span><svg aria-hidden="true"><use href="#perro-l"/></svg>Perro</span></label>
+          <label class="opt"><input type="radio" name="sp" value="gato"><span><svg aria-hidden="true"><use href="#gato-l"/></svg>Gato</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="q" data-reveal>
+        <legend>¿Qué edad tiene?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="st" value="joven" checked><span id="lblJoven">Cachorro, hasta 1 año</span></label>
+          <label class="opt"><input type="radio" name="st" value="adulto"><span>Adulto</span></label>
+          <label class="opt"><input type="radio" name="st" value="mayor"><span>Mayor de 7 años</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="q" data-reveal>
+        <legend>¿Necesita algo especial?</legend>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="nd" value="no" checked><span>Nada en especial</span></label>
+          <label class="opt"><input type="radio" name="nd" value="sensible"><span>Estómago o piel sensible</span></label>
+          <label class="opt" id="optEster" hidden><input type="radio" name="nd" value="ester"><span>Está esterilizado</span></label>
+        </div>
+      </fieldset>
+    </form>
+
+    <article class="result" id="result" aria-live="polite">
+      <div class="result__media"><img id="rImg" src="https://purina.com.gt/sites/default/files/2024-03/Proplan_C-2.png" alt="" width="800" height="600"></div>
+      <div class="result__body">
+        <h3 class="h3" id="rName">Dog Chow® o Pro Plan® para cachorros</h3>
+        <p id="rWhy">En su primer año crece rápido: busca la fórmula que diga crecimiento o cachorros.</p>
+        <div class="result__facts">
+          <div class="fact"><b id="rProt">22.5 %</b><span>proteína mínima en base seca (AAFCO)</span></div>
+          <div class="fact"><b id="rDays">7 días</b><span>para cambiar de alimento sin molestias</span></div>
+        </div>
+        <a class="btn" id="rLink" href="https://purina.com.gt/dogchow" rel="noopener">Ver la línea <span class="sq" aria-hidden="true"></span></a>
+        <p class="result__note">Es una guía para empezar. Tu veterinario conoce a tu mascota y tiene la última palabra.</p>
+      </div>
+    </article>
+  </div>
+</section>
+<!-- ===== FIN Buscador ===== -->
+
+<!-- ===== INICIO Etapas ===== -->
+<section class="stages section" id="etapas" aria-labelledby="t-stages">
+  <div class="wrap">
+    <h2 class="h2" id="t-stages" data-reveal>Cada etapa pide otra cosa</h2>
+    <p class="lead" data-reveal>Lo que come a los tres meses no es lo que necesita a los diez años. Estas son las tres grandes etapas.</p>
+    <div class="stages__list">
+      <article class="stage">
+        <div class="stage__pic" data-reveal><img data-zoom src="https://purina.com.gt/sites/default/files/2023-08/purina-img-cuidados.jpg" alt="Gato atigrado recostado junto a su dueña" width="1000" height="720" loading="lazy"></div>
+        <div>
+          <p class="stage__num" data-reveal>22.5 % <small>/ 30 %</small></p>
+          <h3 class="h3" data-reveal>Cachorros y gatitos</h3>
+          <p data-reveal>Crecen en meses lo que nosotros en años. Necesitan más proteína, más energía y croquetas a su tamaño. Un perro de raza grande puede seguir creciendo hasta los 18 o 24 meses. Proteína mínima en base seca para crecimiento: 22.5 % en perros y 30 % en gatos.</p>
+        </div>
+      </article>
+      <article class="stage">
+        <div class="stage__pic" data-reveal><img data-zoom src="https://purina.com.gt/sites/default/files/2023-08/purina-img-cuidados-nutricion.jpg" alt="Gato comiendo de su plato en casa" width="1000" height="720" loading="lazy"></div>
+        <div>
+          <p class="stage__num" data-reveal>18 % <small>/ 26 %</small></p>
+          <h3 class="h3" data-reveal>Adultos</h3>
+          <p data-reveal>Ya no crecen: ahora se trata de mantenerse. La porción depende de su peso y de cuánto se mueve, y la indica la tabla del empaque. Si está esterilizado, suele necesitar menos calorías. Proteína mínima en base seca para mantenimiento: 18 % en perros y 26 % en gatos.</p>
+        </div>
+      </article>
+      <article class="stage">
+        <div class="stage__pic" data-reveal><img data-zoom src="https://purina.com.gt/sites/default/files/2023-08/purina-img-community.jpg" alt="Perro recibiendo cariño de una joven" width="1000" height="720" loading="lazy"></div>
+        <div>
+          <p class="stage__num" data-reveal>7+ <small>años</small></p>
+          <h3 class="h3" data-reveal>Mayores</h3>
+          <p data-reveal>Desde los siete años, más o menos, se mueven menos y su cuerpo cambia. Una fórmula para adulto mayor y una visita al veterinario cada seis meses ayudan a detectar a tiempo lo que cambia.</p>
+        </div>
+      </article>
+    </div>
+    <p class="src">Fuentes: perfiles de nutrientes AAFCO (FDA, AAFCO). Los valores de 18 % y 30 % salen de tablas AAFCO anteriores; conviene confirmarlos con la edición vigente. Consultado en noviembre de 2026.</p>
+  </div>
+</section>
+<!-- ===== FIN Etapas ===== -->
+
+<!-- ===== INICIO Cambio en 7 días ===== -->
+<section class="switch section" id="cambio" aria-labelledby="t-switch">
+  <div class="wrap switch__pin" id="switchPin">
+    <div>
+      <h2 class="h2" id="t-switch" data-reveal>Cámbialo en siete días</h2>
+      <p class="lead" data-reveal>Un cambio de golpe puede caerle pesado. Mezcla el alimento nuevo con el anterior y ve subiendo la proporción. Si tiene el estómago sensible, alárgalo a diez días.</p>
+    </div>
+    <div class="bowlbar" id="bowlbar" aria-hidden="true">
+      <div class="bowlbar__old" id="barOld">Anterior 75 %</div>
+      <div class="bowlbar__new" id="barNew">Nuevo 25 %</div>
+    </div>
+    <ol class="days" id="days">
+      <li class="day is-on" data-old="75"><b>Días 1 y 2</b><span class="small">75 % anterior, 25 % nuevo</span></li>
+      <li class="day" data-old="50"><b>Días 3 y 4</b><span class="small">Mitad y mitad</span></li>
+      <li class="day" data-old="25"><b>Días 5 y 6</b><span class="small">25 % anterior, 75 % nuevo</span></li>
+      <li class="day" data-old="0"><b>Día 7</b><span class="small">100 % alimento nuevo</span></li>
+    </ol>
+    <p class="src">Fuentes: <a href="https://www.AAHA.org/globalassets/05-pet-health-resources/nutritionalresources/petparent/aaha-tips-and-timelines.pdf" rel="noopener">AAHA</a>, <a href="https://purina.ca/articles/dog/feeding/changing-dog-food-how-switch-dog-food" rel="noopener">Purina</a>. Consultado en noviembre de 2026.</p>
+  </div>
+</section>
+<!-- ===== FIN Cambio en 7 días ===== -->
+
+<!-- ===== INICIO Nunca en su plato ===== -->
+<section class="never section" aria-labelledby="t-never">
+  <div class="wrap">
+    <h2 class="h2" id="t-never" data-reveal>Nunca en su plato</h2>
+    <p class="lead" data-reveal>Cuatro alimentos de tu cocina que le hacen daño. Toca cada carta para saber por qué.</p>
+    <div class="never__grid">
+      <button class="flip" type="button" aria-pressed="false" data-reveal>
+        <span class="flip__in">
+          <span class="flip__face flip__front">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6c2 4 1 7-1 9" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="square"/><g fill="currentColor"><circle cx="24" cy="22" r="7"/><circle cx="40" cy="22" r="7"/><circle cx="32" cy="32" r="7"/><circle cx="18" cy="35" r="7"/><circle cx="46" cy="35" r="7"/><circle cx="25" cy="46" r="7"/><circle cx="39" cy="46" r="7"/><circle cx="32" cy="57" r="6"/></g><circle cx="32" cy="32" r="7" fill="#E81C24"/></svg>
+            <b>Uvas y pasas</b>
+          </span>
+          <span class="flip__face flip__back"><b>Uvas y pasas</b><span>Pueden causar falla de los riñones en perros. Como no se sabe qué sustancia la provoca, evítalas también en gatos.</span></span>
+        </span>
+      </button>
+      <button class="flip" type="button" aria-pressed="false" data-reveal>
+        <span class="flip__in">
+          <span class="flip__face flip__front">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="12" y="6" width="40" height="52" fill="currentColor"/><g fill="#E81C24"><rect x="16" y="10" width="14" height="10"/><rect x="34" y="22" width="14" height="10"/><rect x="16" y="34" width="14" height="10"/><rect x="34" y="46" width="14" height="8"/></g></svg>
+            <b>Chocolate</b>
+          </span>
+          <span class="flip__face flip__back"><b>Chocolate</b><span>La teobromina y la cafeína son tóxicas para ellos. Entre más cacao, más peligroso: el amargo es peor que el de leche.</span></span>
+        </span>
+      </button>
+      <button class="flip" type="button" aria-pressed="false" data-reveal>
+        <span class="flip__in">
+          <span class="flip__face flip__front">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><path fill="currentColor" d="M32 12c12 8 22 16 22 28 0 11-10 18-22 18S10 51 10 40c0-12 10-20 22-28Z"/><path d="M32 4v12M28 58l-2 4M36 58l2 4" stroke="currentColor" stroke-width="3"/><path d="M32 18c-6 8-8 16-8 24M32 18c6 8 8 16 8 24" stroke="#E81C24" stroke-width="3" fill="none"/></svg>
+            <b>Cebolla y ajo</b>
+          </span>
+          <span class="flip__face flip__back"><b>Cebolla y ajo</b><span>Dañan los glóbulos rojos de perros y gatos. Cocinarlos no les quita lo tóxico, y eso incluye el cebollín.</span></span>
+        </span>
+      </button>
+      <button class="flip" type="button" aria-pressed="false" data-reveal>
+        <span class="flip__in">
+          <span class="flip__face flip__front">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="20" width="48" height="24" fill="currentColor"/><g fill="#E81C24"><rect x="14" y="26" width="10" height="12"/><rect x="27" y="26" width="10" height="12"/><rect x="40" y="26" width="10" height="12"/></g></svg>
+            <b>Xilitol</b>
+          </span>
+          <span class="flip__face flip__back"><b>Xilitol</b><span>Endulzante de chicles, dulces, mentas y pasta dental. En perros puede ser mortal si no se atiende a tiempo.</span></span>
+        </span>
+      </button>
+    </div>
+    <div class="never__help">
+      <p><strong>¿Se comió algo de esto?</strong> Llama de inmediato a tu veterinario o a una clínica de emergencias, aunque todavía se vea bien.</p>
+      <p class="src">Fuente: <a href="https://aspca.org/pet-care/animal-poison-control/people-foods-avoid-feeding-your-pets" rel="noopener">ASPCA Animal Poison Control</a>. Consultado en noviembre de 2026.</p>
+    </div>
+  </div>
+</section>
+<!-- ===== FIN Nunca en su plato ===== -->
+
+<!-- ===== INICIO Preguntas ===== -->
+<section class="faq section" id="preguntas" aria-labelledby="t-faq" style="background:var(--bg-2)">
+  <div class="wrap faq__grid">
+    <div>
+      <h2 class="h2" id="t-faq" data-reveal>Dudas frecuentes</h2>
+      <p class="lead" data-reveal>Lo que más se preguntan quienes cuidan a un perro o a un gato.</p>
+    </div>
+    <div class="acc" id="acc">
+      <div class="acc__item" data-reveal>
+        <button class="acc__btn" type="button" aria-expanded="false" aria-controls="a1" id="q1">¿Cuánto debe comer al día?<span class="pm" aria-hidden="true"></span></button>
+        <div class="acc__panel" id="a1" role="region" aria-labelledby="q1"><div><p>La tabla del empaque indica la porción según su peso. Es un punto de partida: si gana o pierde peso, ajusta poco a poco y consulta a tu veterinario.</p></div></div>
+      </div>
+      <div class="acc__item" data-reveal>
+        <button class="acc__btn" type="button" aria-expanded="false" aria-controls="a2" id="q2">¿Puedo darle a mi gato alimento de perro?<span class="pm" aria-hidden="true"></span></button>
+        <div class="acc__panel" id="a2" role="region" aria-labelledby="q2"><div><p>No como dieta. El gato necesita más proteína y nutrientes como la taurina, que el alimento para perro no garantiza en la cantidad que él pide.</p></div></div>
+      </div>
+      <div class="acc__item" data-reveal>
+        <button class="acc__btn" type="button" aria-expanded="false" aria-controls="a3" id="q3">¿Alimento seco o húmedo?<span class="pm" aria-hidden="true"></span></button>
+        <div class="acc__panel" id="a3" role="region" aria-labelledby="q3"><div><p>Los dos pueden ser completos y balanceados. El húmedo aporta agua, algo útil en gatos que beben poco. Muchas familias combinan ambos; lo importante es respetar la porción total.</p></div></div>
+      </div>
+      <div class="acc__item" data-reveal>
+        <button class="acc__btn" type="button" aria-expanded="false" aria-controls="a4" id="q4">¿Cuándo paso de cachorro a adulto?<span class="pm" aria-hidden="true"></span></button>
+        <div class="acc__panel" id="a4" role="region" aria-labelledby="q4"><div><p>En gatos y perros pequeños o medianos, alrededor de los 12 meses. En razas grandes puede ser entre los 18 y 24 meses. Haz el cambio en siete días, como en la guía de arriba.</p></div></div>
+      </div>
+      <div class="acc__item" data-reveal>
+        <button class="acc__btn" type="button" aria-expanded="false" aria-controls="a5" id="q5">¿Qué significa «completo y balanceado»?<span class="pm" aria-hidden="true"></span></button>
+        <div class="acc__panel" id="a5" role="region" aria-labelledby="q5"><div><p>Que el alimento aporta todos los nutrientes que su etapa necesita, en la proporción correcta, sin tener que agregar nada más. Por eso conviene que sea su comida principal.</p></div></div>
+      </div>
+      <div class="acc__item" data-reveal>
+        <button class="acc__btn" type="button" aria-expanded="false" aria-controls="a6" id="q6">¿Cuánta agua necesita?<span class="pm" aria-hidden="true"></span></button>
+        <div class="acc__panel" id="a6" role="region" aria-labelledby="q6"><div><p>Siempre debe tener agua limpia y fresca a su alcance. Cámbiala a diario y lava el bebedero; muchos gatos beben más si el agua está lejos de su comida.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== FIN Preguntas ===== -->
+
+</main>
+
+<!-- ===== INICIO Cierre ===== -->
+<footer class="close" aria-labelledby="t-close">
+  <div class="wrap">
+    <div class="close__top">
+      <h2 class="h2" id="t-close" data-reveal>Su mejor etapa empieza hoy</h2>
+      <a class="btn btn--white" href="#encuentra" data-reveal>Encuentra su alimento <span class="sq" aria-hidden="true"></span></a>
+    </div>
+    <p class="mega" aria-label="Purina" id="mega"><span>P</span><span>U</span><span>R</span><span>I</span><span>N</span><span>A</span></p>
+    <div class="foot">
+      <div>
+        <p><strong>Your Pet, Our Passion.®</strong></p>
+        <div class="foot__links" style="margin-top:14px">
+          <a href="https://purina.com.gt/purina/productos" rel="noopener">Productos</a>
+          <a href="https://purina.com.gt/purina/nuestras-marcas" rel="noopener">Nuestras marcas</a>
+          <a href="https://purina.com.gt/purina/mi-mascota" rel="noopener">Cuidados y entrenamiento</a>
+          <a href="https://purina.com.gt/purina/conoce-purina" rel="noopener">¿Por qué Purina?</a>
+        </div>
+      </div>
+      <p class="foot__credits">Fotos y empaques: Purina Guatemala (purina.com.gt). Datos de nutrición: AAFCO, FDA, AAHA y ASPCA, consultados en noviembre de 2026. Propuesta de rediseño; contenido de referencia sujeto a validación de la marca.</p>
+    </div>
+  </div>
+  <div class="toy" id="toy" role="img" aria-label="Tablero Purina que puedes arrastrar">
+    <svg aria-hidden="true"><use href="#tablero"/></svg>
+    <span class="toy__tip">Arrástrame</span>
+  </div>
+</footer>
+<!-- ===== FIN Cierre ===== -->
+
+<script src="vendor/gsap.min.js" defer></script>
+<script src="vendor/ScrollTrigger.min.js" defer></script>
+<script src="vendor/SplitText.min.js" defer></script>
+<script src="vendor/lenis.min.js" defer></script>
+<script src="js/main.js?v=20261123c" defer></script>
+</body>
+</html>
